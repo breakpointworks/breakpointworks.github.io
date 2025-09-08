@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Contact • BreakPoint Works</title>
+    <meta name="title" content="BreakPoint Works">
+    <meta name="description" content="BreakPoint Works designs and optimizes enterprise systems for growth, reliability, and speed.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="icon" type="image/png" href="./assets/img/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./assets/img/favicon.svg" />
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="BreakPoint Works" />
+    <link rel="manifest" href="./assets/img/site.webmanifest" />
+    <meta name="theme-color" content="#0d6efd">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  </head>
+  <body>
+    <header class="sticky-top">
+      <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+        <div class="container">
+          <a class="navbar-brand d-flex align-items-center" href="./index.html">
+            <img src="./assets/img/breakpoint-works-logo-60x60.svg" alt="BreakPoint Works" width="36" height="36" class="me-2">
+            <span class="fw-bold">BreakPoint Works</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+              <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="./about.html">About</a></li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="index.html" role="button" data-bs-toggle="dropdown">Services</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="./services/software-development.html">Software Development</a></li>
+                  <li><a class="dropdown-item" href="./services/website-solutions.html">Website Solutions</a></li>
+                  <li><a class="dropdown-item" href="./services/virtual-assistant.html">Virtual Assistant</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="./case-studies/index.html">Case Studies</a></li>
+              <li class="nav-item"><a class="nav-link" href="./blog/index.html">Blog</a></li>
+              <li class="nav-item"><a class="btn btn-primary ms-3" href="./contact.html"><i class="bi bi-rocket-takeoff"></i> Start Project</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container py-5">
+      <div class="mb-5">
+        <h1>Contact Us</h1>
+        <p class="text-muted">Share a few details and we’ll reach out with next steps.</p>
+      </div>
+      <div class="row">
+        <div class="col-lg-7">
+          <form id="contactForm" class="row g-3 needs-validation" novalidate onsubmit="handleSubmit(event)">
+            <div class="col-md-6">
+              <label for="name" class="form-label">Name</label>
+              <input name="user_name" class="form-control" placeholder="Your name" required>
+              <div class="invalid-feedback">Please enter your name.</div>
+            </div>
+            <div class="col-md-6">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" name="user_email" class="form-control" placeholder="Email" required>
+              <div class="invalid-feedback">Please enter a valid email.</div>
+            </div>
+            <div class="col-6">
+              <label for="company" class="form-label">Company</label>
+              <input type="text" name="company" class="form-control" placeholder="Company" required>
+              <div class="invalid-feedback">Please enter your company.</div>
+            </div>
+            <div class="col-6">
+              <label for="tel" class="form-label">Phone (optional)</label>
+              <input type="tel" name="user_phone" class="form-control" placeholder="Phone (optional)">
+            </div>
+            <div class="col-md-6">
+              <label for="service" class="form-label">Service</label>
+              <select name="service" class="form-select" required>
+                <option value="">Select a service</option>
+                <optgroup label="Development">
+                  <option>Custom Software</option>
+                  <option>Web & Mobile</option>
+                  <option>Cloud & DevOps</option>
+                </optgroup>
+                <optgroup label="WordPress & Audit">
+                  <option>WordPress Development</option>
+                  <option>Site Audit & Optimization</option>
+                </optgroup>
+                <optgroup label="Virtual Assistant">
+                  <option>Virtual Assistant</option>
+                </optgroup>
+              </select>
+              <div class="invalid-feedback">Please choose a service.</div>
+            </div>
+            <div class="col-md-6">
+              <label for="budget" class="form-label">Budget</label>
+              <input name="budget" class="form-control" placeholder="e.g., ₱100k–₱500k">
+            </div>
+            <div class="col-12">
+              <label for="project_summary" class="form-label">Project Brief</label>
+              <textarea name="project_summary" class="form-control" rows="3" placeholder="Project summary"></textarea>
+              <div class="invalid-feedback">Please provide a project brief.</div>
+            </div>
+            <div class="col-12">
+              <button class="btn btn-primary w-100" type="submit">
+                <i class="bi bi-send-fill me-2"></i>Send Inquiry
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="col-lg-5">
+          <div class="p-4 bg-light rounded-3">
+            <h6>Contact Details</h6>
+            <p class="mb-1"><i class="bi bi-envelope me-2"></i>Email: breakpointworks@gmail.com</p>
+            <p class="mb-1"><i class="bi bi-telephone me-2"></i>Phone: +63 907 535 7894</p>
+            <p class="mb-0"><i class="bi bi-geo-alt me-2"></i>Philippines • Asia/Manila</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="mt-4 border-top pt-4 pb-4 bg-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-3 mb-3">
+            <div class="d-flex align-items-center mb-2"><img src="./assets/img/breakpoint-works-logo-60x60.svg" width="36" height="36" class="me-2"><strong>BreakPoint Works</strong></div>
+            <p class="text-muted small mb-0">Engineering scalable solutions for a digital future.</p>
+          </div>
+          <div class="col-6 col-md-3 mb-3">
+            <h6 class="small text-uppercase">Company</h6>
+            <ul class="list-unstyled small">
+              <li><a href="./about.html" class="text-decoration-none">About</a></li>
+              <li><a href="./case-studies/index.html" class="text-decoration-none">Case Studies</a></li>
+              <li><a href="./blog/index.html" class="text-decoration-none">Blog</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3 mb-3">
+            <h6 class="small text-uppercase">Policies</h6>
+            <ul class="list-unstyled small">
+              <li><a href="privacy.html" class="text-decoration-none">Privacy Policy</a></li>
+              <li><a href="terms.html" class="text-decoration-none">Terms of Service</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3 mb-3">
+            <h6 class="small text-uppercase">Services</h6>
+            <ul class="list-unstyled small">
+              <li><a href="./services/index.html" class="text-decoration-none">All Services</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3 mb-3">
+            <h6 class="small text-uppercase">Contact</h6>
+            <a href="mailto:breakpointworks@gmail.com" class="small mb-2">breakpointworks@gmail.com</a>
+            <p class="small mb-2">+63 907 535 7894</p>
+            <div class="d-flex gap-3">
+              <a href="https://github.com/breakpoint-works" class="text-muted fs-5"><i class="bi bi-github"></i></a>
+              <a href="https://www.facebook.com/breakpointlabs" class="text-muted fs-5"><i class="bi bi-facebook"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="text-center small text-muted mt-3">© 2025 BreakPoint Works • All rights reserved</div>
+      </div>
+    </footer>
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1080">
+      <div id="successToast" class="toast align-items-center text-bg-success border-0" role="alert">
+        <div class="d-flex">
+          <div class="toast-body">
+            ✅ Thank you — your message has been received!
+          </div>
+          <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      (() => {
+        emailjs.init('glp_yIE8fz5GZDhm1');
+      })();
+
+      function handleSubmit(event) {
+        event.preventDefault();
+        const toastEl = document.querySelector('#successToast');
+        const toast = new bootstrap.Toast(toastEl);
+
+        const form = document.querySelector('#contactForm');
+        const name = form.querySelector('[name="user_name"]').value;
+        const email = form.querySelector('[name="user_email"]').value;
+        const phone = form.querySelector('[name="user_phone"]').value;
+        const service = form.querySelector('[name="service"]').value;
+        const summary = form.querySelector('[name="project_summary"]').value;
+        const budget = form.querySelector('[name="budget"]').value;
+        const company = form.querySelector('[name="company"]').value;
+
+        if (!form.checkValidity()) {
+          form.classList.add('was-validated');
+          return;
+        }
+
+        emailjs.send("service_clnb7rr","template_sdrs2yf",{
+                title: service,
+                name: name,
+                user_name: name,
+                user_email: email,
+                user_phone: phone,
+                service: service,
+                project_summary: summary,
+                company: company,
+                budget: budget,
+            }, 'glp_yIE8fz5GZDhm1');
+
+        toast.show();
+        form.reset();
+        form.classList.remove('was-validated');
+      }
+    </script>
+  </body>
+</html>
