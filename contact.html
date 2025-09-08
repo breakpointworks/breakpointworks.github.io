@@ -178,46 +178,6 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-      (() => {
-        emailjs.init('glp_yIE8fz5GZDhm1');
-      })();
-
-      function handleSubmit(event) {
-        event.preventDefault();
-        const toastEl = document.querySelector('#successToast');
-        const toast = new bootstrap.Toast(toastEl);
-
-        const form = document.querySelector('#contactForm');
-        const name = form.querySelector('[name="user_name"]').value;
-        const email = form.querySelector('[name="user_email"]').value;
-        const phone = form.querySelector('[name="user_phone"]').value;
-        const service = form.querySelector('[name="service"]').value;
-        const summary = form.querySelector('[name="project_summary"]').value;
-        const budget = form.querySelector('[name="budget"]').value;
-        const company = form.querySelector('[name="company"]').value;
-
-        if (!form.checkValidity()) {
-          form.classList.add('was-validated');
-          return;
-        }
-
-        emailjs.send("service_clnb7rr","template_sdrs2yf",{
-                title: service,
-                name: name,
-                user_name: name,
-                user_email: email,
-                user_phone: phone,
-                service: service,
-                project_summary: summary,
-                company: company,
-                budget: budget,
-            }, 'glp_yIE8fz5GZDhm1');
-
-        toast.show();
-        form.reset();
-        form.classList.remove('was-validated');
-      }
-    </script>
+    <script src="./assets/js/contact.js" defer></script>
   </body>
 </html>
