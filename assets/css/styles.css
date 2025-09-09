@@ -80,11 +80,28 @@ body.dark .bg-light{background:#111!important;color:#ddd}
   z-index: 1050;
 }
 
-.floating-cta {
+.floating-cta-group {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  border-radius: 50px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  z-index: 1055; /* stays above other elements */
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.floating-cta-group a {
+  font-size: small;
+  width: 100%;
+}
+
+.whatsapp-btn {
+  color: #25D366;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+@media (min-width: 992px) {
+  .floating-cta-group {
+    display: none;
+  }
 }
