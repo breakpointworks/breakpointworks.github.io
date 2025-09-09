@@ -24,13 +24,14 @@ body.dark .bg-light{background:#111!important;color:#ddd}
 }
 
 .card {
+  background: rgba(255, 255, 255, 0.8);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(12px);
-  border-radius: 1rem;
+  /* background: rgba(255, 255, 255, 0.8); */
+  /* backdrop-filter: blur(12px); */
+  /* border-radius: 1rem; */
 }
 
 .card:hover {
